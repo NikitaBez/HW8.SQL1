@@ -87,7 +87,7 @@ public class BankLoginTests {
 
     @DisplayName("User lockout after 3 wrong password attempts")
     @Test
-    public void ShouldBlockUserAfterThreeInputInvalidPassword() {
+    public void shouldBlockUserAfterThreeInputInvalidPassword() {
         var password = DataHelper.getRandomPassword();
         loginPage.insert(user.getLogin(), password);
         loginPage.failed();
@@ -118,7 +118,7 @@ public class BankLoginTests {
 
     @DisplayName("Message about an empty field Password")
     @Test
-    public void ShouldNotificationWithEmptyPassword() {
+    public void shouldNotificationWithEmptyPassword() {
         loginPage.insert(user.getLogin(), null);
         loginPage.emptyPassword();
     }
